@@ -42,7 +42,6 @@ public class FollowServices {
 
         FollowModel updateFollowModel = followRepository.findById(id).get(); // DB
         
-        updateFollowModel.setPid(followModel.getPid());
         updateFollowModel.setFid(followModel.getFid());
         updateFollowModel.setIsFollow(followModel.getIsFollow());
         updateFollowModel.setIsFriend(followModel.getIsFriend());

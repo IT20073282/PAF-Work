@@ -17,26 +17,30 @@ public class FollowModel{
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column (name ="PersonID")
-    private Integer pid;
 
     @Column (name = "FollowerID")
-    private Integer fid;
+    private String fid;
 
     private Integer isFollow;
 
     private Integer isFriend;
 
-    public FollowModel(){
 
+
+    public FollowModel() {
     }
 
-    public FollowModel(Integer pid, Integer fid, Integer isFollow, Integer isFriend) {
-        this.pid = pid;
+    
+
+
+    public FollowModel( String fid, Integer isFollow, Integer isFriend) {
         this.fid = fid;
         this.isFollow = isFollow;
         this.isFriend = isFriend;
     }
+
+
+
 
     public Integer getId() {
         return id;
@@ -46,19 +50,11 @@ public class FollowModel{
         this.id = id;
     }
 
-    public Integer getPid() {
-        return pid;
-    }
-
-    public void setPid(Integer pid) {
-        this.pid = pid;
-    }
-
-    public Integer getFid() {
+    public String getFid() {
         return fid;
     }
 
-    public void setFid(Integer fid) {
+    public void setFid(String fid) {
         this.fid = fid;
     }
 
@@ -77,6 +73,8 @@ public class FollowModel{
     public void setIsFriend(Integer isFriend) {
         this.isFriend = isFriend;
     }
+
+    
 
     
 
